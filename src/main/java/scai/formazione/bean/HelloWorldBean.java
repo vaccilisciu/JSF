@@ -7,7 +7,12 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class HelloWorldBean {
 
-	public String getHello() {
-		return "Hello Bean for JSF";
+	
+	public String getTitle() {
+		return "HelloBean";
+	}
+	
+	public String getBody() {
+		return "Text from HelloJavaBean.java.\nGood work";
 	}
 }
