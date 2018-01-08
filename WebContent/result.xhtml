@@ -7,10 +7,6 @@
 <h:head>
 	<title>#{helloWorldBean.title}</title>
 </h:head>
-<body>
-	<h:form>
-		<h3>Test JSF Form</h3>
-		<h:commandButton action="#{controllerBean.page}" value="Click"></h:commandButton>
-	</h:form>
+<body>#{helloWorldBean.body}
 </body>
 </html>

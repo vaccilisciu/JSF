@@ -13,6 +13,6 @@ public class HelloWorldBean {
 	}
 	
 	public String getBody() {
-		return "Text from HelloJavaBean.java.\nGood work";
+		return "Text from HelloJavaBean.java";
 	}
 }
