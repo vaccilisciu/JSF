@@ -5,9 +5,9 @@ import javax.faces.bean.SessionScoped;
 
 @ManagedBean
 @SessionScoped
-public class Controller {
+public class ControllerBean {
 
-	public String getPage() {
-		return "result";
+	public String moveToPage() {
+		return "result?faces-redirect=true";
 	}
 }
