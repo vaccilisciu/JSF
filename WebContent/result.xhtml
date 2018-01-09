@@ -2,11 +2,51 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
+	<!-- <h:title>#{helloWorldBean.title}</h:title> -->
+	<h:outputStylesheet library="css" name="style.css" />
+	<!-- <link type="text/css" rel="stylesheet" href="css/style.css" /> -->
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
 	<title>#{helloWorldBean.title}</title>
 </h:head>
-<body>#{helloWorldBean.body}
-</body>
+<h:body>
+<div class="container-fluid">
+		<div class="row vertical-align">
+			<div class="col-xs-6 col-md-2 header">
+				<img src="img/scai.png" class="img-fluid imt" />
+			</div>
+			<div class="hidden-xs hidden-sm col-md-8 text-center">
+				<p class="h1">Java Server Faces</p>
+				<p class="h4">
+					<em>JSF and Twitter Bootstrap example</em>
+				</p>
+			</div>
+			<div class="col-xs-6 col-md-2 header text-right">
+				<img src="img/JSF.png" class="img-fluid imt" />
+			</div>
+		</div>
+		<hr></hr>
+
+		<h:form id="form">
+			<p:treeTable value="#{ttPaginatorView.root}" var="document"
+				paginator="true" rows="10">
+				<f:facet name="header">
+            Registered users
+        </f:facet>
+				<p:column headerText="Name">
+					<h:outputText value="bella" />
+				</p:column>
+				<p:column headerText="Size">
+					<h:outputText value="ciao KB" />
+				</p:column>
+				<p:column headerText="Type">
+					<h:outputText value="hello" />
+				</p:column>
+			</p:treeTable>
+		</h:form>
+	</div>
+</h:body>
 </html>
