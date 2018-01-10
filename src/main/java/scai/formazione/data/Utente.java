@@ -86,4 +86,11 @@ public class Utente {
 	public void setCap(String cap) {
 		this.cap = cap;
 	}
+
+	@Override
+	public String toString() {
+		return "Utente [name=" + name + ", country=" + country + ", region="
+				+ region + ", province=" + province + ", city=" + city
+				+ ", cap=" + cap + "]";
+	}
 }

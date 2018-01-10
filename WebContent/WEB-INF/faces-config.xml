@@ -27,7 +27,7 @@
         <!-- nome di riferimento del bean -->
         <managed-bean-name>registerUser</managed-bean-name>
         <!-- package del mio bean -->
-        <managed-bean-class>scai.formazione.prime.textvalidation.InputTextareaView</managed-bean-class>
+        <managed-bean-class>scai.formazione.prime.registration.RegistrationBean</managed-bean-class>
         <!-- scope del mio bean -->
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>

@@ -18,11 +18,10 @@ public class PaginatorView implements Serializable {
     public void init() {
         root = new DefaultTreeNode();
          
-        for(int i = 0; i < 50; i++) {
-            TreeNode node = new DefaultTreeNode(new Document("Node " + i, String.valueOf((int) (Math.random() * 1000)), "Document"), root);
-             
-            for(int j = 0; j < 5; j++) {
-                new DefaultTreeNode(new Document("Node " + i + "." + j, String.valueOf((int) (Math.random() * 1000)), "Document"), node);
+        for(int i = 0; i < 11; i++) {
+            TreeNode node = new DefaultTreeNode(new Document("country", "region", "province", "city", "cap", "username"), root);
+            for(int j = 0; j < 2; j++) {
+                new DefaultTreeNode(new Document("country", "region", "province", "city", "cap", "username"), node);
             }
         }
     }

@@ -33,26 +33,23 @@
 					<div class="ui-g-6">
 						<h:form>
 							<h3>Username</h3>
-							<p:autoComplete id="username" placeholder="Username" binding="#{username}" />
+							<p:autoComplete id="username" placeholder="Username" binding="#{username}" value="giorgio" />
 							<h3>Country</h3>
-							<p:autoComplete id="country" placeholder="Country" binding="#{country}" />
+							<p:autoComplete id="country" placeholder="Country" binding="#{country}" value="italy" />
 							<h3>Region</h3>
-							<p:autoComplete id="region" placeholder="Region" binding="#{region}" />
+							<p:autoComplete id="region" placeholder="Region" binding="#{region}" value="piedmont" />
 							<h3>Province</h3>
-							<p:autoComplete id="province" placeholder="Province" binding="#{province}" />
+							<p:autoComplete id="province" placeholder="Province" binding="#{province}" value="turin" />
 							<h3>City</h3>
-							<p:autoComplete id="city" placeholder="City" binding="#{city}" />
+							<p:autoComplete id="city" placeholder="City" binding="#{city}" value="turin" />
 							<h3>CAP</h3>
-							<p:autoComplete id="cap" placeholder="CAP" binding="#{cap}" />
+							<p:autoComplete id="cap" placeholder="CAP" binding="#{cap}" value="10100" />
 							<hr />
-							<p:commandButton value="Register" actionListener="#{registerUser.save(username.value, country.value, region.value, province.value, city.value, cap.value)}" />
+							<p:commandButton value="Register" actionListener="#{registerUser.save(username.value, country.value, region.value, province.value, city.value, cap.value)}" action="#{controllerBean.moveToPage}" />
 						</h:form>
 					</div>
 					<div class="ui-g-3"></div>
 				</div>
-		<h:form>
-			<h:commandButton action="#{controllerBean.moveToPage}" value="Click"></h:commandButton>
-		</h:form>
 	</div>
 </h:body>
 </html>

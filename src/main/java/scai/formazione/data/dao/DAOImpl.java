@@ -1,5 +1,9 @@
 package scai.formazione.data.dao;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import scai.formazione.data.Singleton;
 import scai.formazione.data.Utente;
 
@@ -17,7 +21,12 @@ public class DAOImpl implements DAO{
 		mySingleton.setIndiceUtente(++lastIndiceUtente);
 	}
 	
-	public static void main(String[] args) {
-		
+	public ArrayList<Utente> getListaUtenti() {
+		ArrayList<Utente> listaUtenti = new ArrayList<Utente>();
+		HashMap<Integer, Utente> collectionUtente = mySingleton.accessoCollectionUtente();
+		for(Integer it: collectionUtente.keySet()){
+			listaUtenti.add(collectionUtente.get(it));
+		}
+		return listaUtenti;
 	}
 }
