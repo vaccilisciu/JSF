@@ -27,8 +27,13 @@ public class PaginatorView implements Serializable {
     public void init() {
     	ArrayList<Utente> listaUtentiIta = daoUtenti.getListaUtentiIta();
     	root = new DefaultTreeNode();
+    	
 		TreeNode italy = new DefaultTreeNode(new Document("Italy", "-", "-", "-", "-", "-"), root);
 		TreeNode france = new DefaultTreeNode(new Document("France", "-", "-", "-", "-", "-"), root);
+		TreeNode spain = new DefaultTreeNode(new Document("Spain", "-", "-", "-", "-", "-"), root);
+		TreeNode portugal = new DefaultTreeNode(new Document("Portugal", "-", "-", "-", "-", "-"), root);
+		TreeNode malta = new DefaultTreeNode(new Document("Malta", "-", "-", "-", "-", "-"), root);
+
 		TreeNode child = null;
 		for(int i=0; i<listaUtentiIta.size(); i++) {
 			String region = listaUtentiIta.get(i).getRegion();
