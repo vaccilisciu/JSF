@@ -9,4 +9,6 @@ public interface DAO {
 	public void insertNuovoUtente(Utente nuovoUtente);
 	
 	public ArrayList<Utente> getListaUtenti();
+	
+	public ArrayList<Utente> getListaUtentiIta();
 }

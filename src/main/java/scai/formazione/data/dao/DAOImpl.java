@@ -29,4 +29,14 @@ public class DAOImpl implements DAO{
 		}
 		return listaUtenti;
 	}
+	
+	public ArrayList<Utente> getListaUtentiIta() {
+	    	ArrayList<Utente> listaUtentiIta = new ArrayList<Utente>();
+	    	HashMap<Integer, Utente> collectionUtente = mySingleton.accessoCollectionUtente();
+			for(Integer it: collectionUtente.keySet()){
+				if(collectionUtente.get(it).getCountry().equalsIgnoreCase("Italy"))
+					listaUtentiIta.add(collectionUtente.get(it));
+			}
+	    	return listaUtentiIta;
+	    }
 }

@@ -9,7 +9,7 @@ public class HelloWorldBean {
 
 	
 	public String getTitle() {
-		return "HelloBean";
+		return "JSF";
 	}
 	
 	public String getBody() {
