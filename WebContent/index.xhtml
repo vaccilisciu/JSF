@@ -6,9 +6,7 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-	<!-- <h:title>#{helloWorldBean.title}</h:title> -->
 	<h:outputStylesheet library="css" name="style.css" />
-	<!-- <link type="text/css" rel="stylesheet" href="css/style.css" /> -->
 	<h:outputStylesheet library="css" name="bootstrap.min.css" />
 </h:head>
 <h:body>
@@ -45,7 +43,7 @@
 							<h3>CAP</h3>
 							<p:autoComplete id="cap" placeholder="CAP" binding="#{cap}" value="10100" />
 							<hr />
-							<p:commandButton value="Register" actionListener="#{registerUser.save(username.value, country.value, region.value, province.value, city.value, cap.value)}" action="#{controllerBean.moveToPage}" />
+							<p:commandButton value="REGISTER" actionListener="#{registerUser.save(username.value, country.value, region.value, province.value, city.value, cap.value)}" action="#{controllerBean.moveToPage}" />
 						</h:form>
 					</div>
 					<div class="ui-g-3"></div>

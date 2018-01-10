@@ -1,19 +1,17 @@
 package scai.formazione.prime;
 
 import java.io.Serializable;
- 
+
 public class Document implements Serializable, Comparable<Document> {
- 
-    private String country;
-    private String region; 
-    private String province;
-    private String city;
-    private String cap;
-    private String username;
-    
-    
- 
-    public Document(String country, String region, String province,
+
+	private String country;
+	private String region;
+	private String province;
+	private String city;
+	private String cap;
+	private String username;
+
+	public Document(String country, String region, String province,
 			String city, String cap, String username) {
 		super();
 		this.country = country;
@@ -23,10 +21,23 @@ public class Document implements Serializable, Comparable<Document> {
 		this.cap = cap;
 		this.username = username;
 	}
+	
+	public Document(String region, String province,
+			String city, String cap, String username) {
+		super();
+		this.region = region;
+		this.province = province;
+		this.city = city;
+		this.cap = cap;
+		this.username = username;
+	}
 
+	public Document(String country) {
+		super();
+		this.country = country;
+	}
 
- 
-    public String getCountry() {
+	public String getCountry() {
 		return country;
 	}
 
@@ -74,9 +85,7 @@ public class Document implements Serializable, Comparable<Document> {
 		this.username = username;
 	}
 
-	
- 
-    @Override
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -90,8 +99,6 @@ public class Document implements Serializable, Comparable<Document> {
 				+ ((username == null) ? 0 : username.hashCode());
 		return result;
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -135,8 +142,6 @@ public class Document implements Serializable, Comparable<Document> {
 		return true;
 	}
 
-
-
 	@Override
 	public String toString() {
 		return "Document [country=" + country + ", region=" + region
@@ -144,9 +149,7 @@ public class Document implements Serializable, Comparable<Document> {
 				+ ", username=" + username + "]";
 	}
 
-
-
 	public int compareTo(Document document) {
-        return this.getCountry().compareTo(document.getCountry());
-    }
-}  
+		return this.getCountry().compareTo(document.getCountry());
+	}
+}
